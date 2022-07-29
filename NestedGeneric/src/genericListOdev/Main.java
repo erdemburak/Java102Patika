@@ -9,12 +9,15 @@ public class Main {
 
         liste.add(2);
         liste.add(3);
+
         System.out.println("Dizideki eleman sayısı : " + liste.size());
         System.out.println("Dizinin kapasitesi : " + liste.getCapacity());
+
         liste.add(4);
         liste.add(5);
         liste.add(3);
         liste.add(6);
+
         System.out.println("Dizideki eleman sayısı : " + liste.size());
         System.out.println("Dizinin kapasitesi : " + liste.getCapacity());
 
