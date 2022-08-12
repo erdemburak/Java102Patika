@@ -59,5 +59,38 @@ public class StreamApi {
         list.stream().distinct().map(i -> i + 2).forEach(i -> System.out.println(i));
 
 
+        ArrayList<String> stringList = new ArrayList<>();
+        stringList.add("Burak");
+        stringList.add("Armağan");
+        stringList.add("Erdem");
+        stringList.add("Ankara");
+        stringList.add("İstanbul");
+        stringList.add("İzmir");
+        stringList.add("Ankara");
+        stringList.add("Antalya");
+        stringList.add("Erdem");
+        stringList.add("Akyol");
+
+        System.out.println("String listenin ekrana yazdırılması");
+        System.out.println("-----------------------------------");
+        stringList.stream().forEach(i -> System.out.println(i));
+
+        System.out.println("\nUniq verilerin sıralanmış şekilde ilk 2 değer atlanarak ekrana yazılması");
+        System.out.println("-----------------------------------");
+        stringList.stream().distinct().sorted().skip(2).forEach(i -> System.out.println(i));
+
+        System.out.println("\nListede tekrar eden veri sayısı");
+        System.out.println("-----------------------------------");
+        System.out.println(stringList.size() - stringList.stream().distinct().count());
+
+        System.out.println("\nListede tekrar eden veri sayısı");
+        System.out.println("-----------------------------------");
+        stringList.stream().map(i -> i + ".com").forEach(i -> System.out.println(i));
+
+        System.out.println("\nUzunluğu 5 olan elemanların sıralanmış şekilde ekrana yazılması");
+        System.out.println("-----------------------------------");
+        stringList.stream().filter(i -> i.length() == 5).sorted().forEach(i -> System.out.println(i));
+
+
     }
 }
