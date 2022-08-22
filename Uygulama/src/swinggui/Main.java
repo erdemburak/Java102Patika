@@ -1,4 +1,4 @@
-package com.patikadev;
+package swinggui;
 
 public class Main {
     public static void main(String[] args) {
